@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root {
+    --main-color: #00ffd1;
+    --Second-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .2rem solid rgba(255, 255, 255, .3);
+    --color-gradient-2: linear-gradient(150deg, var(--black), var(--main-color));
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+/* Start scroll change */
+
+ ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gradient-2);
+    border-radius: 6px;
+}
+
+
+/* End scroll change */
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.header a h1 {
+    color: var(--main-color);
+    width: 7em;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .navbar a:nth-child(6) {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons {
+    display: flex;
+}
+
+.header .icons div,
+.header .icons span {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover,
+.header .icons span:hover {
+    color: var(--main-color);
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container.active {
+    right: 0;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* End Header */
+
+
+/* Start Camming-Soon Section */
+
+.Camming-Soon {
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    background-color: var(--Second-color);
+}
+
+.Camming-Soon p {
+    width: 100%;
+    height: 100%;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+/* End Camming-Soon Section */
+
+
+/*Start Footer  */
+
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .box-container .box .share a:hover {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 300ms;
+}
+
+.footer .box-container .box .share a:nth-child(1):hover {
+    background-color: #0672e5;
+}
+
+.footer .box-container .box .share a:nth-child(2):hover {
+    background-color: #37bff9;
+}
+
+.footer .box-container .box .share a:nth-child(3):hover {
+    background-color: #fb3074;
+}
+
+.footer .box-container .box .share a:nth-child(4):hover {
+    background-color: #0157b4;
+}
+
+.footer .box-container .box .share a:nth-child(5):hover {
+    background-color: #e10000;
+}
+
+.footer .box-container .box .share a:nth-child(6):hover {
+    background-color: #377bc4;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-45deg);
+    }
+    20% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    70% {
+        transform: rotate(45deg);
+    }
+    90% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    /* padding-top: 2.5rem; */
+    font-size: 1.2rem;
+    color: #fff;
+    border-top: var(--border);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+.footer .credit p {
+    margin-right: 2px;
+}
+
+.products .box-container .box .content .price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+
+/* footer */
+
+.footer {
+    background: var(--black);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box h3 i {
+    color: #fff;
+}
+
+.footer .box-container .box .links {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links i {
+    color: var(--orange);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .links:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+    color: #fff;
+}
+
+.footer .box-container .box .email {
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.footer .box-container .box .payment-img {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    height: 3rem;
+    display: block;
+}
+
+.language {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.option {
+    font-size: 18px;
+    background-color: var(--main-color);
+    ;
+}
+
+
+/* end footer */
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+    .home .content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+/* Start about Metaverse */
+
+.about-Metaverse {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    width: 700px;
+    line-height: 20px;
+}
+
+.about-Metaverse .hexagon-1 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translate(740px, 0px);
+}
+
+.about-Metaverse .hexagon-1 img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+
+/* the (M) section */
+
+#img-mataverse {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    margin-left: 32px;
+    margin-top: 31px;
+}
+
+
+/* the (Around M) section */
+
+#img-mataverse-around {
+    width: 233px;
+    height: 230px;
+    position: absolute;
+    margin-left: 29px;
+    margin-top: 33px;
+    animation-name: rotate;
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.about-Metaverse .description,
+.about-Metaverse-2 .description-2 {
+    color: white;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.about-Metaverse h5,
+.about-Metaverse-2 h5 {
+    background: linear-gradient(55deg, var(--main-color), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-Metaverse h2,
+.about-Metaverse-2 h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.features {
+    margin-top: 50px;
+}
+
+.feature .far {
+    margin-right: 15px;
+}
+
+.features .feature,
+.feature i {
+    margin-top: 10px;
+    background: linear-gradient(180deg, var(--main-color), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+/* section 2 */
+
+.about-Metaverse-2 {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    width: 900px;
+    padding-bottom: 100px;
+}
+
+.about-Metaverse-2 .hexagon-2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translate(0px, 0px);
+}
+
+.about-Metaverse-2 .description-2,
+.p2,
+.about-Metaverse-2 h3,
+.features-2 {
+    transform: translate(340px, 0px);
+    font-size: 18px;
+}
+
+.about-Metaverse-2 .hexagon-2 img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+.features {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.feature .far {
+    margin-right: 15px;
+}
+
+.features .feature,
+.feature i {
+    margin-top: 10px;
+    background: linear-gradient(180deg, var(--main-color), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+/* End about Metaverse */
